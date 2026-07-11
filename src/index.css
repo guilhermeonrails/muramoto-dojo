@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --nav-h: 4.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-h);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    font-feature-settings: 'palt' 1;
+  }
+
+  ::selection {
+    background: oklch(0.47 0.15 27);
+    color: oklch(0.985 0.002 80);
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(0.56 0.17 28);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Scrollbar — discreto */
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.955 0.003 70);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.72 0.006 45);
+    border: 3px solid oklch(0.955 0.003 70);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  /* Reveal on scroll — só ativa com JS (.js no <html>); conteúdo visível por padrão sem JS */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.75s var(--ease-expo),
+      transform 0.75s var(--ease-expo);
+    will-change: opacity, transform;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .js .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s var(--ease-expo),
+      transform 0.7s var(--ease-expo);
+  }
+  .js .reveal-stagger.is-visible > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal,
+    .js .reveal-stagger > * {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  /* Link com sublinhado que cresce */
+  .link-quiet {
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .link-quiet::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease-expo);
+  }
+  .link-quiet:hover::after,
+  .link-quiet:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer utilities {
+  .kicker {
+    @apply font-sans text-label uppercase text-stone;
+  }
+  .scroll-cue {
+    animation: scroll-cue 2.4s var(--ease-quart) infinite;
+  }
+  @keyframes scroll-cue {
+    0% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(250%);
+    }
+    100% {
+      transform: translateY(250%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-cue {
+      animation: none;
+    }
+  }
+  .measure {
+    max-width: 68ch;
+  }
+  .vertical-jp {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}
