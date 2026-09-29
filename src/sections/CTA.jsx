@@ -36,11 +36,19 @@ export default function CTA() {
             一歩
           </span>
           <h2 className="mt-5 font-display text-[clamp(2.25rem,6vw,4.5rem)] font-semibold leading-[1.05] text-paper">
-            O caminho começa com um passo.
+            Dê o seu primeiro passo.
           </h2>
-          <p className="mx-auto mt-7 max-w-xl text-lead text-paper/75">
-            A aula experimental é gratuita e sem compromisso. Traga apenas a vontade de começar —
-            do resto, cuidamos nós.
+          <p className="mt-4 font-display text-[clamp(1.2rem,2.4vw,1.6rem)] text-seal-bright">
+            Agende uma aula experimental gratuita!
+          </p>
+          <p className="mx-auto mt-7 max-w-xl text-lead text-white">
+            Você não precisa ter nenhuma experiência prévia nem estar em excelente forma física para
+            começar. A melhor maneira de conhecer a nossa metodologia, a nossa estrutura e a energia
+            do nosso tatame é vivenciando a experiência.
+          </p>
+          <p className="mx-auto mt-5 max-w-xl text-lead text-white">
+            Venha fazer uma aula experimental totalmente gratuita e sinta de perto a transformação
+            que o Karatê e o Jiu-Jitsu podem trazer para a sua rotina.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button

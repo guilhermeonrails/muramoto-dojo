@@ -1,15 +1,8 @@
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'
 import Reveal from '../components/Reveal'
-import { images } from '../data/site'
+import { images, diferenciais } from '../data/site'
 import { src, srcSet } from '../utils/image'
-
-const valores = [
-  { kanji: '礼', label: 'Respeito' },
-  { kanji: '忍', label: 'Perseverança' },
-  { kanji: '誠', label: 'Sinceridade' },
-  { kanji: '道', label: 'Caminho' },
-]
 
 export default function About() {
   return (
@@ -18,32 +11,24 @@ export default function About() {
         {/* Texto */}
         <div className="lg:col-span-6">
           <SectionTitle
-            kicker="O Dojo"
-            title="Um lugar para começar o caminho."
+            kicker="Nosso diferencial"
+            title="Atendimento exclusivo e humanizado."
           />
-          <div className="mt-8 space-y-6 measure text-[1.075rem] leading-relaxed text-stone">
-            <p>
-              O <strong className="font-medium text-ink">Muramoto Dojo</strong> nasceu do desejo
-              de ensinar o Karate como ele foi concebido: uma prática de aperfeiçoamento do corpo
-              e do caráter. Aqui, a faixa que se conquista importa menos do que a pessoa que se
-              torna ao longo do caminho.
-            </p>
-            <p>
-              Nossa missão é formar praticantes íntegros — disciplinados no tatame e serenos fora
-              dele. Recebemos do iniciante absoluto ao atleta de competição com o mesmo cuidado: o
-              respeito pela tradição okinawana e a atenção ao ritmo de cada aluno.
-            </p>
-          </div>
+          <p className="mt-8 measure text-[1.075rem] leading-relaxed text-stone">
+            Não somos uma academia de massa. Acreditamos que a verdadeira evolução técnica e
+            pessoal acontece com atenção aos detalhes. Por isso, focamos em:
+          </p>
 
-          {/* Valores */}
-          <Reveal className="mt-12 grid grid-cols-2 gap-x-8 gap-y-7 sm:grid-cols-4">
-            {valores.map((v) => (
-              <div key={v.label} className="flex flex-col gap-2">
-                <span className="font-display text-3xl text-seal" aria-hidden>
-                  {v.kanji}
-                </span>
-                <span className="text-sm font-medium tracking-wide text-ink">{v.label}</span>
-              </div>
+          {/* Diferenciais */}
+          <Reveal as="ul" className="mt-10 space-y-7 measure">
+            {diferenciais.map((d) => (
+              <li key={d.title} className="flex gap-4">
+                <span className="mt-3 h-px w-6 shrink-0 bg-seal" aria-hidden />
+                <div>
+                  <h3 className="font-display text-lg font-medium text-ink">{d.title}</h3>
+                  <p className="mt-1.5 text-[0.98rem] leading-relaxed text-stone">{d.text}</p>
+                </div>
+              </li>
             ))}
           </Reveal>
         </div>

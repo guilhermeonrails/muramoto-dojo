@@ -6,8 +6,8 @@ import PhilosophyBand from './sections/PhilosophyBand'
 import Sensei from './sections/Sensei'
 import Instructors from './sections/Instructors'
 import Modalities from './sections/Modalities'
-import Benefits from './sections/Benefits'
-import Schedule from './sections/Schedule'
+import Mission from './sections/Mission'
+import Plans from './sections/Plans'
 import Gallery from './sections/Gallery'
 import Testimonials from './sections/Testimonials'
 import FAQ from './sections/FAQ'
@@ -35,8 +35,8 @@ export default function App() {
         <Sensei />
         <Instructors />
         <Modalities />
-        <Benefits />
-        <Schedule />
+        <Mission />
+        <Plans />
         <Gallery />
         <Testimonials />
         <FAQ />

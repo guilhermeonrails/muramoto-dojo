@@ -11,14 +11,14 @@ export default function History() {
           <div className="lg:sticky lg:top-28">
             <SectionTitle
               jp="士道館"
-              title="A herança do Shidokan."
-              intro="O Shidokan é uma escola de Karate forjada no encontro entre o kata tradicional, o kumite de contato e o treino de resistência. Do corpo à mente, tudo é treinado como uma coisa só."
+              title="Linhagem tradicional: Sosui Yoshiji Soeno."
+              intro="O Karatê Shidokan praticado no Muramoto Dojo possui uma das linhagens mais respeitadas e temidas do mundo das artes marciais. Nossa metodologia deriva diretamente dos ensinamentos de seu fundador, o Grão-Mestre Sosui Yoshiji Soeno (Faixa Preta 10º Dan)."
             />
             <Reveal className="mt-10 space-y-5 measure" delay={120}>
               {[
-                ['Contato pleno', 'Técnica testada em combate real, com controle e responsabilidade.'],
-                ['Kata como raiz', 'As formas clássicas preservam a memória e a precisão do estilo.'],
-                ['Espírito antes da força', 'A serenidade e o respeito guiam cada movimento.'],
+                ['Triatlo das Artes Marciais', 'Diferentemente do karatê tradicional, focado em competições de pontos ou em formas (katas), o Shidokan de Sosui Soeno ficou mundialmente conhecido por esse nome.'],
+                ['Combate real', 'Ao treinar no Muramoto Dojo, você não está apenas praticando uma atividade física: está bebendo direto da fonte de um sistema de combate real.'],
+                ['Budo japonês', 'Um estilo lapidado por uma das maiores lendas vivas do Budo japonês.'],
               ].map(([t, d]) => (
                 <div key={t} className="flex gap-4">
                   <span className="mt-2 h-px w-6 shrink-0 bg-seal" aria-hidden />

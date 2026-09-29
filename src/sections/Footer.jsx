@@ -18,8 +18,8 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Logo tone="dark" />
             <p className="mt-6 max-w-sm text-[0.98rem] leading-relaxed text-paper/60">
-              Karate Shidokan tradicional em São Paulo. Tradição, disciplina e respeito no tatame —
-              para todas as idades.
+              Karatê Shidokan tradicional em Mogi das Cruzes. Atendimento exclusivo e humanizado,
+              em pequenos grupos ou aulas particulares.
             </p>
             <div className="mt-7 flex gap-3">
               {socials.map(({ href, label, Icon }) => (

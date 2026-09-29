@@ -8,9 +8,9 @@ export default function Modalities() {
   return (
     <Section id="modalidades" tone="paper">
       <SectionTitle
-        kicker="No tatame"
-        title="Uma turma para cada caminho."
-        intro="Do primeiro contato da criança ao alto rendimento do atleta, cada modalidade tem seu próprio ritmo, foco e propósito."
+        kicker="Para quem é"
+        title="Para quem é o Muramoto Dojo?"
+        intro="Adultos e crianças encontram no tatame o mesmo cuidado: um treino sério, adaptado ao momento de cada aluno."
       />
 
       <div className="mt-16 space-y-20 sm:space-y-24">

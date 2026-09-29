@@ -6,7 +6,7 @@ import { src, srcSet } from '../utils/image'
 export default function PhilosophyBand() {
   return (
     <section
-      aria-label="Filosofia do Karate"
+      aria-label="Filosofia do Karatê"
       className="relative flex min-h-[68vh] items-center overflow-hidden bg-sumi py-24"
     >
       <img

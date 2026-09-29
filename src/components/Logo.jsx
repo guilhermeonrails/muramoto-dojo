@@ -19,7 +19,7 @@ export default function Logo({ tone = 'light', className = '' }) {
           Muramoto
         </span>
         <span className={`mt-[3px] text-[0.62rem] font-medium uppercase tracking-[0.32em] ${subColor}`}>
-          Karate Shidokan
+          Karatê Shidokan
         </span>
       </span>
     </span>

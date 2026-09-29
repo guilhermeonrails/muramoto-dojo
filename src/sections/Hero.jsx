@@ -75,11 +75,11 @@ export default function Hero() {
       <Container className="relative z-10 pb-[clamp(3.5rem,9vh,6rem)] pt-[calc(var(--nav-h)+2rem)]">
         <div className="max-w-3xl">
           <span
-            className="kicker mb-6 flex items-center gap-3 !text-paper/70"
+            className="kicker mb-6 flex w-fit items-center gap-3 bg-seal px-3 py-1.5 !text-white"
             style={rise(120)}
           >
-            <span className="inline-block h-px w-8 bg-seal-bright" aria-hidden />
-            Karate Shidokan · São Paulo
+            <span className="inline-block h-px w-8 bg-white" aria-hidden />
+            Karatê Shidokan · Mogi das Cruzes
           </span>
 
           <h1 className="font-display text-display font-semibold text-paper">
@@ -92,12 +92,13 @@ export default function Hero() {
           </h1>
 
           <p
-            className="mt-8 max-w-xl text-lead text-paper/75"
+            className="mt-8 max-w-xl text-lead text-white [text-shadow:0_1px_12px_oklch(0.15_0.006_40/0.55)]"
             style={rise(560)}
           >
-            No Muramoto Dojo, cada golpe começa e termina com respeito. Ensinamos o Karate
-            tradicional como um caminho — de disciplina, força e serenidade — para crianças,
-            jovens e adultos.
+            O Karatê Shidokan é uma arte marcial tradicional japonesa, com foco no desenvolvimento
+            físico e mental. No Muramoto Dojo, você treina em pequenos grupos ou em aulas
+            particulares, com instrutores dedicados a ensinar com paciência e rigor, seguindo a
+            linhagem do Shidokan.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4" style={rise(720)}>

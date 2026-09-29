@@ -13,14 +13,14 @@ export default function Instructors() {
         intro="Uma equipe formada dentro do próprio dojo, unida pela mesma linhagem e pelo compromisso de ensinar com paciência e rigor."
       />
 
-      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid gap-10 sm:grid-cols-2 sm:gap-x-12 lg:max-w-4xl lg:gap-x-20">
         {instrutores.map((p, i) => (
           <Reveal as="article" key={p.name} delay={i * 90} className="group">
             <div className="relative overflow-hidden">
               <img
                 src={src(p.image, 800)}
                 srcSet={srcSet(p.image, [400, 600, 800])}
-                sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 100vw"
                 alt={p.alt}
                 loading="lazy"
                 decoding="async"

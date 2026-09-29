@@ -5,9 +5,7 @@ import Button from '../components/Button'
 import { MapPin, Clock, Phone, Mail, Whatsapp } from '../components/Icons'
 import { contact, whatsapp } from '../data/site'
 
-const mapQuery = encodeURIComponent(
-  `${contact.addressLine1}, ${contact.addressLine2}`,
-)
+const mapQuery = encodeURIComponent(contact.mapQuery)
 const mapSrc = `https://maps.google.com/maps?q=${mapQuery}&z=15&output=embed`
 
 export default function Location() {
@@ -16,7 +14,10 @@ export default function Location() {
       <div className="grid gap-x-16 gap-y-12 lg:grid-cols-12">
         {/* Info */}
         <div className="lg:col-span-5">
-          <SectionTitle kicker="Onde nos encontrar" title="Venha nos visitar." />
+          <SectionTitle kicker="Localização e contato" title="Venha nos visitar." />
+          <p className="mt-6 measure text-[1.02rem] leading-relaxed text-stone">
+            Estamos localizados no bairro César de Souza, em Mogi das Cruzes.
+          </p>
 
           <Reveal className="mt-10 space-y-8" delay={80}>
             <div className="flex gap-4">
@@ -24,15 +25,13 @@ export default function Location() {
               <div>
                 <p className="font-medium text-ink">{contact.addressLine1}</p>
                 <p className="text-stone">{contact.addressLine2}</p>
-                <p className="text-sm text-stone">CEP {contact.cep}</p>
               </div>
             </div>
 
             <div className="flex gap-4">
               <Clock className="mt-0.5 text-xl text-seal" />
               <div>
-                <p className="font-medium text-ink">{contact.hoursWeek}</p>
-                <p className="text-stone">{contact.hoursSat}</p>
+                <p className="text-stone">{contact.hours}</p>
               </div>
             </div>
 
@@ -61,7 +60,7 @@ export default function Location() {
               size="lg"
               icon={<Whatsapp className="text-[1.15em]" />}
             >
-              Falar no WhatsApp
+              Fale conosco no WhatsApp
             </Button>
           </Reveal>
         </div>
