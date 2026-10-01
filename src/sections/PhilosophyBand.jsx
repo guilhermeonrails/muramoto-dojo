@@ -37,17 +37,7 @@ export default function PhilosophyBand() {
             <p className="font-display text-[clamp(1.9rem,4.2vw,3.4rem)] font-medium leading-[1.15] text-paper">
               “No Karatê, não existe primeiro ataque.”
             </p>
-            <footer className="mt-8 flex items-center gap-4 text-paper/60">
-              <span className="h-px w-10 bg-seal-bright" aria-hidden />
-              <span className="text-sm tracking-wide">
-                Um dos princípios fundadores do Karate-Dō
-              </span>
-            </footer>
           </blockquote>
-          <p className="mt-10 max-w-xl text-[1.05rem] leading-relaxed text-paper/70">
-            A força que se treina aqui não serve para atacar — serve para não precisar. Antes da
-            técnica, ensina-se o domínio de si.
-          </p>
         </Reveal>
       </Container>
     </section>

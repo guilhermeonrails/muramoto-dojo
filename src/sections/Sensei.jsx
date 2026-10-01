@@ -8,7 +8,7 @@ const credenciais = ['Faixa Preta 3º Dan', 'Pentacampeã Paulista', 'Campeã Br
 
 export default function Sensei() {
   return (
-    <Section id="sensei" tone="paper">
+    <Section id="sensei-natalia" tone="paper">
       <div className="grid items-start gap-x-16 gap-y-14 lg:grid-cols-12">
         {/* Imagem */}
         <Reveal className="lg:sticky lg:top-28 lg:col-span-5">
@@ -81,10 +81,7 @@ export default function Sensei() {
           <h3 className="mt-10 font-display text-h3 font-medium text-ink">Além do tatame: formação e propósito</h3>
           <div className="mt-3 space-y-6 measure text-[1.05rem] leading-relaxed text-stone">
             <p>
-              Aliando a disciplina marcial ao crescimento intelectual, Natália construiu uma sólida
-              carreira no meio jurídico. Atualmente, atua como advogada e traz na bagagem a
-              experiência de ter sido professora universitária nas áreas de Direito Penal, Direito do
-              Consumidor e Direito Tributário.
+            Aliando a disciplina marcial ao aprimoramento intelectual, Natália construiu uma sólida trajetória no meio jurídico. Atualmente, atua como advogada e possui experiência como professora universitária, tendo lecionado nas áreas de Segurança Pública, Direito do Consumidor e Tributário, Direito Administrativo, Civil e Constitucional, além de Direito Penal e Processual Penal. Essa trajetória reúne disciplina, conhecimento técnico e experiência acadêmica, consolidando sua atuação no campo jurídico.
             </p>
             <p>
               Toda essa experiência em didática, liderança e pedagogia é aplicada diretamente em suas

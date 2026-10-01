@@ -39,7 +39,7 @@ export default function Navbar() {
         </a>
 
         {/* Navegação desktop */}
-        <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-5 whitespace-nowrap lg:flex xl:gap-8">
           {nav.map((item) => {
             const isActive = active === item.id
             return (

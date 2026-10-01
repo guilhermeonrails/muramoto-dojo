@@ -51,7 +51,8 @@ export const whatsapp = (
 export const nav = [
   { id: 'sobre', label: 'O Dojo' },
   { id: 'historia', label: 'Shidokan' },
-  { id: 'sensei', label: 'Sensei' },
+  { id: 'instrutores', label: 'Sensei' },
+  { id: 'trajetoria', label: 'Conheça os mestres' },
   { id: 'modalidades', label: 'Para quem é' },
   { id: 'planos', label: 'Planos' },
   { id: 'galeria', label: 'Galeria' },
@@ -142,6 +143,7 @@ export const instrutores = [
     image: images.senseiStance,
     alt: 'Shihan Ricardo Muramoto em posição de kata',
     specialty: 'Campeão Brasileiro 1997',
+    href: '#sensei',
   },
   {
     name: 'Natália Salaroli',
@@ -150,6 +152,7 @@ export const instrutores = [
     image: images.sensei2,
     alt: 'Sensei Natália Salaroli, instrutora do Muramoto Dojo',
     specialty: 'Campeã Brasileira (Absoluto) e Pentacampeã Paulista',
+    href: '#sensei-natalia',
   },
 ]
 
@@ -176,7 +179,7 @@ export const planos = [
         name: 'Foco Semanal',
         freq: '1x por semana',
         desc: 'Perfeito para conciliar com rotinas corridas e viagens.',
-        price: 'R$ 200',
+        price: 'R$ 250',
       },
       {
         name: 'Evolução Contínua',

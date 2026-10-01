@@ -4,6 +4,7 @@ import About from './sections/About'
 import History from './sections/History'
 import PhilosophyBand from './sections/PhilosophyBand'
 import Sensei from './sections/Sensei'
+import SenseiRicardo from './sections/SenseiRicardo'
 import Instructors from './sections/Instructors'
 import Modalities from './sections/Modalities'
 import Mission from './sections/Mission'
@@ -32,8 +33,12 @@ export default function App() {
         <About />
         <History />
         <PhilosophyBand />
-        <Sensei />
         <Instructors />
+        {/* Agrupa as duas biografias sob um único item do menu */}
+        <div id="trajetoria">
+          <SenseiRicardo />
+          <Sensei />
+        </div>
         <Modalities />
         <Mission />
         <Plans />

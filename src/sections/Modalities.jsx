@@ -6,7 +6,7 @@ import { src, srcSet } from '../utils/image'
 
 export default function Modalities() {
   return (
-    <Section id="modalidades" tone="paper">
+    <Section id="modalidades" tone="paper" className="border-t border-mist">
       <SectionTitle
         kicker="Para quem é"
         title="Para quem é o Muramoto Dojo?"

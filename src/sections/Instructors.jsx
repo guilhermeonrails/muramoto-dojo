@@ -16,7 +16,11 @@ export default function Instructors() {
       <div className="mt-14 grid gap-10 sm:grid-cols-2 sm:gap-x-12 lg:max-w-4xl lg:gap-x-20">
         {instrutores.map((p, i) => (
           <Reveal as="article" key={p.name} delay={i * 90} className="group">
-            <div className="relative overflow-hidden">
+            <a
+              href={p.href}
+              aria-label={`Conheça a trajetória de ${p.name}`}
+              className="relative block overflow-hidden"
+            >
               <img
                 src={src(p.image, 800)}
                 srcSet={srcSet(p.image, [400, 600, 800])}
@@ -37,7 +41,7 @@ export default function Instructors() {
               <span className="absolute bottom-4 left-4 text-sm font-medium tracking-wide text-paper/90">
                 {p.role}
               </span>
-            </div>
+            </a>
             <div className="mt-5">
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="text-h3 font-medium text-ink">{p.name}</h3>
